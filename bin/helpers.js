@@ -27,9 +27,9 @@ module.exports.color = function (color, text) {
 };
 
 module.exports.inlineLog = function (msg) {
-    process.stdout.clearLine();
-    process.stdout.cursorTo(0);
-    process.stdout.write(msg);
+    process.stdout && process.stdout.clearLine && process.stdout.clearLine();
+    process.stdout && process.stdout.cursorTo && process.stdout.cursorTo(0);
+    process.stdout && process.stdout.write && process.stdout.write(msg);
 };
 
 module.exports.isValidUrl = function (url) {
